@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Containers */
+  .card { @apply bg-white border border-slate-200 rounded-xl shadow-sm; }
+  .card-header { @apply px-5 py-4 border-b border-slate-200 font-semibold; }
+  .card-body { @apply p-5; }
+
+  /* Toolbar */
+  .toolbar { @apply mb-4 flex flex-wrap items-center gap-2; }
+
+  /* Buttons */
+  .btn { @apply inline-flex items-center gap-2 px-3 py-2 rounded-md font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition; }
+  .btn-primary { @apply bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500; }
+  .btn-secondary { @apply bg-slate-100 text-slate-800 hover:bg-slate-200 focus:ring-slate-400; }
+  .btn-warning { @apply bg-amber-500 text-white hover:bg-amber-600 focus:ring-amber-500; }
+  .btn-danger { @apply bg-rose-600 text-white hover:bg-rose-700 focus:ring-rose-500; }
+
+  /* Form */
+  .label { @apply block mb-1 font-medium text-slate-700; }
+  .input { @apply w-full border-slate-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500; }
+
+  /* Tables */
+  .table-wrap { @apply card overflow-hidden; }
+  .table { @apply w-full text-left text-sm; }
+  .thead { @apply bg-slate-50 text-slate-700; }
+  .th { @apply p-3 font-semibold; }
+  .td { @apply p-3 align-top; }
+  .tr { @apply border-b border-slate-200 even:bg-slate-50 hover:bg-slate-100; }
+
+  /* Badges (statuts) */
+  .badge { @apply inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-full; }
+  .badge-open { @apply bg-blue-100 text-blue-800; }
+  .badge-inprogress { @apply bg-amber-100 text-amber-800; }
+  .badge-resolved { @apply bg-emerald-100 text-emerald-800; }
+  .badge-closed { @apply bg-slate-200 text-slate-700; }
+
+  /* Alerts */
+  .alert-success { @apply rounded-md border border-emerald-300 bg-emerald-50 text-emerald-800 px-4 py-2; }
+  .alert-error { @apply rounded-md border border-rose-300 bg-rose-50 text-rose-700 px-4 py-2; }
+}
