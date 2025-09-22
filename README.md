@@ -67,7 +67,7 @@ Trois rôles (**Admin**, **Développeur**, **Rapporteur**) gèrent clients, proj
 > Base de données par défaut : **SQLite** (aucun serveur DB à installer).
 
 ```bash
-git clone https://github.com/N0L1S1/sae502-gestion-tickets.git
+git clone https://github.com/N0L1S1/R-T-sae502-gestion-tickets.git
 cd sae502-gestion-tickets
 
 # Back (Laravel)
