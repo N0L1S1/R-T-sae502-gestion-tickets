@@ -52,12 +52,12 @@ Trois rôles (**Admin**, **Développeur**, **Rapporteur**) gèrent clients, proj
 ---
 
 ## Modèle de données
-- **User** *(id, name, email, password, role)* — `role ∈ {ADMIN, DEVELOPPEUR, RAPPORTEUR}`  
-- **Client** *(id, name, contact_email?, phone?)*  
-- **Project** *(id, client_id, name, description?)* — `belongsTo Client`  
-- **Ticket** *(id, project_id, reporter_id, assignee_id?, title, description?, status)* — `belongsTo Project`  
-  `status ∈ {OPEN, IN_PROGRESS, RESOLVED, CLOSED}`  
-- **TicketStatusHistory** *(id, ticket_id, old_status, new_status, changed_by, changed_at)*
+- **User** *(id, name, email, email_verified_at, password, remember_token, created_at, updated_at, role)* — `role ∈ {ADMIN, DEVELOPPEUR, RAPPORTEUR}`
+- **Client** *(id, name, contact_email, phone, created_at, updated_at)*
+- **Project** *(id, client_id, name, description, created_at, updated_at)* — `belongsTo Client`
+- **Ticket** *(id, project_id, reporter_id, assignee_id, title, description, status, created_at, updated_at)* `belongsTo Project`, `reporter/assignee → User`
+  `status ∈ {OPEN, IN_PROGRESS, RESOLVED, CLOSED}`
+- **TicketStatusHistory** *(id, ticket_id, old_status, new_status, changed_by, changed_at)*  `belongsTo Ticket`, `changed_by → User`
 
 ---
 
